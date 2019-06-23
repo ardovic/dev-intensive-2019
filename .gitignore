@@ -1,5 +1,8 @@
 # Built application files
 build/
+*.apk
+*.ap_
+*.aab
 
 # Files for the ART/Dalvik VM
 *.dex
@@ -39,12 +42,6 @@ google-services.json
 # Version control
 vcs.xml#ardovic
 
-# Gradle files
-.gradle/
-
-# User-specific configurations
-*.iml
-
 # OS-specific files
 .DS_Store
 .DS_Store?
@@ -53,3 +50,11 @@ vcs.xml#ardovic
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# lint
+lint/intermediates/
+lint/generated/
+lint/outputs/
+lint/tmp/
+lint/reports/
+
