@@ -48,11 +48,11 @@ object Utils {
     }
 
     fun toInitials(firstName: String?, lastName: String?): String? {
-        if (firstName.isNullOrBlank()) return null
-        return if (lastName.isNullOrBlank()) {
-            firstName.first().toUpperCase().toString()
-        } else {
-            firstName.first().toUpperCase().toString() + lastName.first().toUpperCase().toString()
+        if (firstName.isNullOrBlank() && lastName.isNullOrBlank()) return null
+        return when {
+            firstName.isNullOrBlank() -> lastName?.first()?.toUpperCase().toString()
+            lastName.isNullOrBlank() -> firstName.first().toUpperCase().toString()
+            else -> firstName.first().toUpperCase().toString() + lastName.first().toUpperCase().toString()
         }
     }
 
