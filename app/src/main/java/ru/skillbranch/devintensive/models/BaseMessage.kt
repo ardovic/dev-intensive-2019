@@ -22,7 +22,7 @@ abstract class BaseMessage(
             type: String,
             payload: String,
             isIncoming: Boolean = false
-        ): BaseMessage? {
+        ): BaseMessage {
             messageId++
             return when (type) {
                 "text" -> TextMessage(messageId.toString(), from, chat, isIncoming, date, payload)
